@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">E-commerce Website</a>
+    </nav>
+    <div class="container">
+        <h1>Products</h1>
+        <ul>
+            {% for product in request.products %}
+            <li>
+                {{ product.name }} - {{ product.price }}
+                <p>{{ product.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
